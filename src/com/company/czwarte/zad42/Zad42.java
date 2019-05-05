@@ -73,14 +73,11 @@ public class Zad42 {
     }
 
     private void writeTxt(String name) throws IOException, FileNotFoundException {
-        System.out.println("Write txt: ");
         List<Home> list = createNewList();
         List<String> fileContent = new ArrayList<>();
 
         for(int i = 0; i< list.size(); i++) {
-            System.out.println("In for " + i);
             String temp = homes.get(i).getName() + " " + homes.get(i).getCond() + " " + homes.get(i).getPrice() + " " + list.get(i).getPrice();
-            System.out.println(temp);
             fileContent.add(temp);
         }
         Path out = Paths.get("/Users/michalcoo/IdeaProjects/javaProjects/mcopjavaue/src/res/" + name);
@@ -93,7 +90,6 @@ public class Zad42 {
     }
 
     private void writeObj(String name) throws FileNotFoundException, IOException {
-        System.out.println("WRITE OBJ");
         ObjectOutputStream pl;
         List<Home> list = createNewList();
         int size = sizeList();
